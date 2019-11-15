@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gyara_01/globals/const.dart';
 
-//Outline Button
+//Outline Secondary Button
 
-class ButtonWithOutline extends StatelessWidget {
-  const ButtonWithOutline({
-    Key key,
-    @required this.style,
-  }) : super(key: key);
-
-  final TextStyle style;
+class SecondaryButton extends StatelessWidget {
+  SecondaryButton({this.textOnButton});
+  final String textOnButton;
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +19,44 @@ class ButtonWithOutline extends StatelessWidget {
         width: 1,
       ),
       splashColor: Color(0xff01A0C7),
-      padding: EdgeInsets.fromLTRB(110.0, 15.0, 110.0, 15.0),
+      padding: kButtonPadding,
       onPressed: () {
         Navigator.pop(context);
       },
-      child: Text("Sign in",
+      child: Text(
+        textOnButton,
+        style: TextStyle(
+          fontSize: kButtonFontSize,
+          color: kBlueTextColor
+        ),
+        textAlign: kAlignText,
+      ),
+    );
+  }
+}
+
+//full Primary button
+class PrimaryButton extends StatelessWidget {
+  PrimaryButton({this.textOnButton});
+  final String textOnButton;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      elevation: 0,
+      highlightElevation: 0,
+      color: kPrimaryColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: new BorderRadius.circular(30.0),
+      ),
+      minWidth: MediaQuery.of(context).size.width,
+      padding: kButtonPadding,
+      onPressed: () {},
+      child: Text( textOnButton,
+          style: TextStyle(fontSize: kButtonFontSize,
+          color: kWhiteTextColor),
           textAlign: TextAlign.center,
-          style:
-          style.copyWith(color: Colors.black, fontWeight: FontWeight.bold)),
+
+      ),
     );
   }
 }

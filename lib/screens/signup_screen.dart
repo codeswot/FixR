@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gyara_01/globals/const.dart';
+import 'package:gyara_01/comp/input_fields.dart';
 import 'package:gyara_01/comp/buttons.dart';
 
 class SignUp extends StatefulWidget {
@@ -19,21 +21,11 @@ class _SignUpState extends State<SignUp> {
       "Sign Up",
       style: TextStyle(
         fontSize: 50.0,
-        color: Color(0xff01A0C7),
+        color: kBlueTextColor,
       ),
     );
 
-    final nameField = TextField(
-      obscureText: false,
-      style: style,
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        labelText: "Full Name",
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(32.0),
-        ),
-      ),
-    );
+    final nameField = new InputField();
 
     final emailField = TextField(
       obscureText: false,
@@ -68,8 +60,8 @@ class _SignUpState extends State<SignUp> {
       ),
     );
 
-    final signUpButton =  PrimaryButton(style: style);
-    final loginButon = ButtonWithOutline(style: style);
+    final signUpButton =  PrimaryButton(textOnButton: 'Sign up',);
+    final loginButton = SecondaryButton(textOnButton: 'Sign in',);
     return Scaffold(
         body: SingleChildScrollView(
       child: Center(
@@ -107,42 +99,12 @@ class _SignUpState extends State<SignUp> {
                 SizedBox(
                   height: 15.0,
                 ),
-                loginButon,
+                loginButton,
               ],
             ),
           ),
         ),
       ),
-    ));
+    ),);
   }
 }
-
-class PrimaryButton extends StatelessWidget {
-  const PrimaryButton({
-    Key key,
-    @required this.style,
-  }) : super(key: key);
-
-  final TextStyle style;
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialButton(
-         elevation: 0,
-        highlightElevation: 0,
-        color: Color(0xff01A0C7),
-        shape: RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(30.0),
-        ),
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
-        child: Text("Sign up",
-            textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
-
-    );
-  }
-}
-
