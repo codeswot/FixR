@@ -5,6 +5,7 @@ import 'package:gyara_01/globals/const.dart';
 
 class SecondaryButton extends StatelessWidget {
   SecondaryButton({this.textOnButton});
+  
   final String textOnButton;
 
   @override

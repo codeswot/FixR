@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 
 class InputField extends StatelessWidget {
-  InputField({this.textInput});
+  InputField({this.textInput,this.secureText});
   final String textInput;
+  final bool secureText;
 
   @override
   Widget build(BuildContext context) {
