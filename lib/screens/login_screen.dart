@@ -15,7 +15,11 @@ class _LogInState extends State<LogIn> {
 
   @override
   Widget build(BuildContext context) {
-
+    final onScreen = Text("Sign In",
+      style: TextStyle(
+        fontSize: 50.0,
+        color: Colors.blue,
+      ),);
 
     final emailField = TextField(
       obscureText: false,
@@ -46,7 +50,7 @@ class _LogInState extends State<LogIn> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {},
-        child: Text("Login",
+        child: Text("Sign in",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white, fontWeight: FontWeight.bold)),
@@ -62,7 +66,7 @@ class _LogInState extends State<LogIn> {
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp(),),);
         },
-        child: Text("Signup",
+        child: Text("Sign up",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.black, fontWeight: FontWeight.bold)),
@@ -79,14 +83,18 @@ class _LogInState extends State<LogIn> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    SizedBox(height: 80,),
                     SizedBox(
-                      height: 155.0,
+                      height: 200.0,
                       child: Image.asset(
-                        "assets/logo.png",
+                        'images/bg2.png',
+
                         fit: BoxFit.contain,
                       ),
                     ),
-                    SizedBox(height: 45.0),
+                    SizedBox(height: 0.0),
+                    onScreen,
+                    SizedBox(height: 20.0),
                     emailField,
                     SizedBox(height: 25.0),
                     passwordField,
