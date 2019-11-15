@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gyara_01/comp/buttons.dart';
 
 class SignUp extends StatefulWidget {
   SignUp({Key key, this.title}) : super(key: key);
@@ -67,43 +68,8 @@ class _SignUpState extends State<SignUp> {
       ),
     );
 
-    final signUpButton =
-       MaterialButton(
-         elevation: 0,
-        highlightElevation: 0,
-        color: Color(0xff01A0C7),
-        shape: RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(30.0),
-        ),
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
-        child: Text("Sign up",
-            textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
-
-    );
-    final loginButon = Material(
-        child: OutlineButton(
-      shape: RoundedRectangleBorder(
-        borderRadius: new BorderRadius.circular(30.0),
-      ),
-      borderSide: BorderSide(
-        color: Color(0xff01A0C7),
-        style: BorderStyle.solid,
-        width: 1,
-      ),
-      splashColor: Color(0xff01A0C7),
-      padding: EdgeInsets.fromLTRB(110.0, 15.0, 110.0, 15.0),
-      onPressed: () {
-        Navigator.pop(context);
-      },
-      child: Text("Sign in",
-          textAlign: TextAlign.center,
-          style:
-              style.copyWith(color: Colors.black, fontWeight: FontWeight.bold)),
-    ));
+    final signUpButton =  PrimaryButton(style: style);
+    final loginButon = ButtonWithOutline(style: style);
     return Scaffold(
         body: SingleChildScrollView(
       child: Center(
@@ -150,3 +116,33 @@ class _SignUpState extends State<SignUp> {
     ));
   }
 }
+
+class PrimaryButton extends StatelessWidget {
+  const PrimaryButton({
+    Key key,
+    @required this.style,
+  }) : super(key: key);
+
+  final TextStyle style;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+         elevation: 0,
+        highlightElevation: 0,
+        color: Color(0xff01A0C7),
+        shape: RoundedRectangleBorder(
+          borderRadius: new BorderRadius.circular(30.0),
+        ),
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () {},
+        child: Text("Sign up",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.bold)),
+
+    );
+  }
+}
+
