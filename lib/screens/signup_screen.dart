@@ -13,14 +13,13 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
   @override
   Widget build(BuildContext context) {
     final onScreen = Text(
       "Sign Up",
       style: TextStyle(
-        fontSize: 45.0,
+        fontSize: kScreenTitle,
         color: kBlueTextColor,
       ),
     );
@@ -45,9 +44,15 @@ class _SignUpState extends State<SignUp> {
     );
 
     final signUpButton = PrimaryButton(
+      onPush: (){},
       textOnButton: 'Sign up',
     );
     final loginButton = SecondaryButton(
+      onPush: (){
+      setState(() {
+        Navigator.pop(context);
+      });
+      },
       textOnButton: 'Sign in',
     );
     return Scaffold(

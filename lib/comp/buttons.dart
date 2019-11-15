@@ -4,10 +4,9 @@ import 'package:gyara_01/globals/const.dart';
 //Outline Secondary Button
 
 class SecondaryButton extends StatelessWidget {
-  SecondaryButton({this.textOnButton});
-  
+  SecondaryButton({@required this.onPush,this.textOnButton});
+final Function onPush;
   final String textOnButton;
-
   @override
   Widget build(BuildContext context) {
     return OutlineButton(
@@ -19,11 +18,9 @@ class SecondaryButton extends StatelessWidget {
         style: BorderStyle.solid,
         width: 1,
       ),
-      splashColor: Color(0xff01A0C7),
+    highlightColor: Colors.blue[200],
       padding: kButtonPadding,
-      onPressed: () {
-        Navigator.pop(context);
-      },
+      onPressed: onPush,
       child: Text(
         textOnButton,
         style: TextStyle(
@@ -38,20 +35,22 @@ class SecondaryButton extends StatelessWidget {
 
 //full Primary button
 class PrimaryButton extends StatelessWidget {
-  PrimaryButton({this.textOnButton});
+  PrimaryButton({this.textOnButton,@required this.onPush});
+  final Function onPush;
   final String textOnButton;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       elevation: 0,
       highlightElevation: 0,
+      highlightColor: Colors.blue[100],
       color: kPrimaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: new BorderRadius.circular(30.0),
       ),
       minWidth: MediaQuery.of(context).size.width,
       padding: kButtonPadding,
-      onPressed: () {},
+      onPressed: onPush,
       child: Text( textOnButton,
           style: TextStyle(fontSize: kButtonFontSize,
           color: kWhiteTextColor),
