@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
               top: 20,
               right: 20,
               child: CircleAvatar(
-                backgroundImage: AssetImage('images/avatar2.jpg'),
+                backgroundImage: AssetImage('images/avatar.png'),
                 radius: 50,
               ),
             ),
