@@ -18,6 +18,9 @@ class Kard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
+    GestureDetector(
+      onTap: onpush,
+      child:
       Container(
       decoration: BoxDecoration(
         boxShadow: [],
@@ -57,6 +60,7 @@ class Kard extends StatelessWidget {
             ),
           ),
         ],
+      ),
       ),
     );
   }

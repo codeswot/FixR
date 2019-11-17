@@ -92,6 +92,20 @@ class _LogInState extends State<LogIn> {
                     height: 15.0,
                   ),
                   signUpButton,
+                  SizedBox(
+                    height: 20,
+                  ),
+                  GestureDetector(
+                    onTap: (){},
+                    child: Text(
+                      'Forgot Password ?',
+                      style: TextStyle(
+                        color: Colors.red[300],
+                        fontFamily: 'Lato',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

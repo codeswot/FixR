@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   //TODO: Use this to navigate
-//  int _page = 0;
+  int _page  ;
   GlobalKey _bottomNavigationKey = GlobalKey();
 
   @override
@@ -54,9 +54,11 @@ class _HomeScreenState extends State<HomeScreen> {
         buttonBackgroundColor: kPrimaryColor,
         backgroundColor: kSecondaryColor,
         animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 600),
+        animationDuration: Duration(milliseconds: 500),
         onTap: (index) {
-          setState(() {});
+          setState(() {
+            _page = index;
+          });
         },
       ),
       body: SafeArea(
@@ -146,9 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             onpush: () {
                               setState(() {
                                 Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => MyMap()));
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => MyMap(),
+                                  ),
+                                );
                               });
                             },
                             iconz: FontAwesomeIcons.wrench,
