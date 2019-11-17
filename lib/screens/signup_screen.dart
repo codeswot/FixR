@@ -21,6 +21,7 @@ class _SignUpState extends State<SignUp> {
       style: TextStyle(
         fontSize: kScreenTitle,
         color: kBlueTextColor,
+        fontFamily: 'Alata'
       ),
     );
 

@@ -21,14 +21,34 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: CurvedNavigationBar(
         //TODO: use this to navigate
         key: _bottomNavigationKey,
-        index: 0,
-        height: 50.0,
+        index: 2,
+        height: 55.0,
         items: <Widget>[
-          Icon(Icons.home, size: 30,color: kSecondaryColor,),
-          Icon(Icons.list, size: 30,color: kSecondaryColor,),
-          Icon(Icons.account_balance_wallet, size: 30,color: kSecondaryColor,),
-          Icon(Icons.call_split, size: 30,color: kSecondaryColor,),
-          Icon(Icons.perm_identity, size: 30,color: kSecondaryColor,),
+          Icon(
+            FontAwesomeIcons.list,
+            size: kBottomNavIconSize,
+            color: kSecondaryColor,
+          ),
+          Icon(
+            FontAwesomeIcons.cog,
+            size: kBottomNavIconSize,
+            color: kSecondaryColor,
+          ),
+          Icon(
+            FontAwesomeIcons.home,
+            size: kBottomNavIconSize,
+            color: kSecondaryColor,
+          ),
+          Icon(
+            FontAwesomeIcons.wallet,
+            size: kBottomNavIconSize,
+            color: kSecondaryColor,
+          ),
+          Icon(
+            FontAwesomeIcons.user,
+            size: kBottomNavIconSize,
+            color: kSecondaryColor,
+          ),
         ],
         color: kPrimaryColor,
         buttonBackgroundColor: kPrimaryColor,
@@ -116,8 +136,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 25,),
-
+                    SizedBox(
+                      height: 25,
+                    ),
                     Row(
                       children: <Widget>[
                         Expanded(
@@ -136,7 +157,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             semanticText: 'Find Mechanic',
                           ),
                         ),
-
                         Expanded(
                           child: Kard(
                             onpush: () {},
@@ -146,31 +166,34 @@ class _HomeScreenState extends State<HomeScreen> {
                             semanticText: 'Gyara Store',
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(
+                          width: 10,
+                        ),
                       ],
                     ),
                     Row(
                       children: <Widget>[
                         Expanded(
                           child: Kard(
-                            onpush: (){},
+                            onpush: () {},
                             iconz: FontAwesomeIcons.weight,
                             labelzTop: 'Wheel',
-                            labelzBottom: '()',
+                            labelzBottom: 'Fixer',
                           ),
                         ),
                         Expanded(
                           child: Kard(
-                            onpush: (){},
+                            onpush: () {},
                             iconz: FontAwesomeIcons.gratipay,
                             labelzTop: 'Todays\'s',
                             labelzBottom: 'Fixer',
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(
+                          width: 10,
+                        ),
                       ],
                     ),
-
                   ],
                 ),
               ],

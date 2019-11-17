@@ -20,6 +20,7 @@ class _LogInState extends State<LogIn> {
     final onScreen = Text(
       "Sign In",
       style: TextStyle(
+        fontFamily: 'Alata',
         fontSize: kScreenTitle,
         color: kBlueTextColor,
       ),

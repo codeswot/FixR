@@ -23,10 +23,7 @@ final Function onPush;
       onPressed: onPush,
       child: Text(
         textOnButton,
-        style: TextStyle(
-          fontSize: kButtonFontSize,
-          color: kBlueTextColor
-        ),
+        style: kTextStyleSecondary,
         textAlign: kAlignText,
       ),
     );
@@ -52,8 +49,7 @@ class PrimaryButton extends StatelessWidget {
       padding: kButtonPadding,
       onPressed: onPush,
       child: Text( textOnButton,
-          style: TextStyle(fontSize: kButtonFontSize,
-          color: kWhiteTextColor),
+          style: kTextStylePrimary,
           textAlign: TextAlign.center,
 
       ),

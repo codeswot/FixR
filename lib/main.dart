@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gyara_01/globals/const.dart';
 import 'package:gyara_01/screens/splash_screen.dart';
 void main() => runApp(MyApp());
 
@@ -9,6 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gyara',
       theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        cursorColor: kPrimaryColor,
         primarySwatch: Colors.blue,
       ),
       home: SplashScreen(),

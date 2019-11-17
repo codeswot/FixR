@@ -10,11 +10,18 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      style: new TextStyle(color:kBlueTextColor),
       obscureText: secureText,
       decoration: InputDecoration(
+
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         labelText: textInput,
         labelStyle: kInputFont,
+
+        focusedBorder:OutlineInputBorder(
+          borderRadius: BorderRadius.circular(32.0),
+          borderSide: const BorderSide(color: kPrimaryColor, width: 2.0),
+        ) ,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(32.0),
         ),
