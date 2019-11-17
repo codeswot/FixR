@@ -12,7 +12,9 @@ const kBlueTextColor = Color(0xff01A0C7);
 
 //Color For Components
 const kPrimaryColor = Color(0xff01A0C7);
-const KSecondaryColor = Colors.white;
+const kSecondaryColor = Colors.white;
+//Shadow Color
+const kShadowColor = Colors.black;
 
 //Fonts
 //fonts for input field
