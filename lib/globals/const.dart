@@ -7,7 +7,7 @@ const kButtonFontSize = 18.0;
 const kButtonPadding = EdgeInsets.fromLTRB(110.0, 15.0, 110.0, 15.0);
 const kTextStylePrimary = TextStyle(fontFamily: 'Alata', fontSize: kButtonFontSize,
     color: kWhiteTextColor);
-const kTextStyleSecondary = TextStyle(fontFamily: 'Alata', fontSize: kButtonFontSize,
+const kTextStyleSecondary = TextStyle(fontFamily: 'Roboto', fontSize: kButtonFontSize,
     color: kBlueTextColor);
 
 //Colors
@@ -23,5 +23,5 @@ const kShadowColor = Colors.black;
 
 //Fonts
 //fonts for input field
-const kInputFont = TextStyle(fontFamily: 'Alata', fontSize: 20.0,
+const kInputFont = TextStyle(fontFamily: 'Roboto', fontSize: 18.0,
 color: Colors.grey);

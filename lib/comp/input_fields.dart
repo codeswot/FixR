@@ -10,7 +10,7 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: new TextStyle(color:kBlueTextColor),
+      style: new TextStyle(color:kShadowColor),
       obscureText: secureText,
       decoration: InputDecoration(
 
@@ -20,7 +20,7 @@ class InputField extends StatelessWidget {
 
         focusedBorder:OutlineInputBorder(
           borderRadius: BorderRadius.circular(32.0),
-          borderSide: const BorderSide(color: kPrimaryColor, width: 2.0),
+          borderSide: const BorderSide(color: kPrimaryColor, width: 1.0),
         ) ,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(32.0),

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gyara_01/globals/const.dart';
 import 'package:gyara_01/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -30,7 +31,18 @@ class _SplashScreenState extends State<SplashScreen> {
           Center(
             child: Image.asset('images/bg2.png'),
           ),
-          Text('GYARA'),
+          Container(
+            margin: EdgeInsets.only(top: 90),
+            child: Text(
+              'GeeksAxis',
+              style: TextStyle(
+                color: kBlueTextColor,
+                fontFamily: 'Lato',
+                fontWeight: FontWeight.bold,
+                fontSize: kButtonFontSize,
+              ),
+            ),
+          ),
         ],
       ),
     );
