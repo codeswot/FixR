@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gyara_01/globals/const.dart';
@@ -77,35 +78,38 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(30, 35, 240, 5),
+                  margin: EdgeInsets.fromLTRB(15, 35, 240, 5),
                   child: Text(
                     'Welcome,',
                     style: TextStyle(
                       color: kBlueTextColor,
                       fontSize: 20,
+                      fontFamily: 'Alata',
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(30, 5, 0, 5),
+                  margin: EdgeInsets.fromLTRB(15, 5, 0, 5),
                   child: Text(
                     'Musa Omar',
                     style: TextStyle(
                       color: kBlueTextColor,
                       fontSize: 25,
+                      fontFamily: 'AlataLato',
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(30, 5, 10, 5),
+                  margin: EdgeInsets.fromLTRB(15, 5, 10, 0),
                   child: Text(
                     'Kaduna, Nigeria',
                     style: TextStyle(
                       color: kBlueTextColor,
                       fontSize: 10,
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Alata',
+
                     ),
                   ),
                 ),
@@ -116,31 +120,30 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.fromLTRB(30, 5, 10, 5),
+                      margin: EdgeInsets.fromLTRB(15, 35, 10, 0),
                       child: Text(
                         'Browse',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
+                          fontFamily: 'Alata',
                           color: kBlueTextColor,
                         ),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(30, 5, 10, 5),
+                      margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
                       child: Text(
-                        'Browse through our available service',
+                        'Browse through our available services.',
                         style: TextStyle(
-                          letterSpacing: 1.5,
                           fontWeight: FontWeight.bold,
-                          fontSize: 17,
+                          fontFamily: 'Alata',
+                          fontSize: 19,
                           color: kBlueTextColor,
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 25,
-                    ),
+
                     Row(
                       children: <Widget>[
                         Expanded(
@@ -171,12 +174,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 15,
                         ),
                       ],
                     ),
                     Row(
                       children: <Widget>[
+
                         Expanded(
                           child: Kard(
                             onpush: () {},
@@ -190,17 +194,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             onpush: () {},
                             iconz: FontAwesomeIcons.gratipay,
                             labelzTop: 'Todays\'s',
-                            labelzBottom: 'Fixer',
+                            labelzBottom: 'Tip',
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 15,
                         ),
                       ],
                     ),
                   ],
                 ),
+
               ],
+
             ),
           ],
         ),

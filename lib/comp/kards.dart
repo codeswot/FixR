@@ -24,10 +24,10 @@ class Kard extends StatelessWidget {
       Container(
       decoration: BoxDecoration(
         boxShadow: [],
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(5.0),
         color: kPrimaryColor,
       ),
-      margin: EdgeInsets.fromLTRB(30, 5, 10, 5),
+      margin: EdgeInsets.fromLTRB(15, 15, 0, 0),
       padding: EdgeInsets.all(15),
       width: 20,
       height: 150,
@@ -48,6 +48,7 @@ class Kard extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               color: kWhiteTextColor,
+              fontFamily: 'Alata',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -56,6 +57,7 @@ class Kard extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               color: kWhiteTextColor,
+              fontFamily: 'Alata',
               fontWeight: FontWeight.bold,
             ),
           ),
