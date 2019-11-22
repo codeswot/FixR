@@ -17,16 +17,21 @@ class Kard extends StatelessWidget {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              border: Border.all(color: kPrimaryColor),
+//              border: Border.all(color: kPrimaryColor),
+              boxShadow: [BoxShadow(
+                color: Colors.grey,
+                blurRadius: 2,
+                  spreadRadius: 0.1,
+              ),],
               borderRadius: BorderRadius.circular(10.0),
               color: kSecondaryColor,
             ),
             margin: EdgeInsets.fromLTRB(15, 15, 0, 0),
-            padding: EdgeInsets.all(15),
             width: 100,
             height: 100,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Icon(
                   iconz,
@@ -34,23 +39,23 @@ class Kard extends StatelessWidget {
                   size: 40,
                   semanticLabel: semanticText,
                 ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                  child: Text(
+                    labelz,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: kBlueTextColor,
+                      fontFamily: 'Alata',
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
           SizedBox(
             height: 5,
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(15, 5, 0, 0),
-            child: Text(
-              labelz,
-              style: TextStyle(
-                fontSize: 15,
-                color: kBlueTextColor,
-                fontFamily: 'Alata',
-                fontWeight: FontWeight.bold,
-              ),
-            ),
           ),
         ],
       ),
@@ -68,50 +73,64 @@ class _CashKardState extends State<CashKard> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.green),
-        boxShadow: [],
+//        border: Border.all(color: Colors.green),
+
+          boxShadow: [BoxShadow(
+            color: Colors.grey,
+            blurRadius: 5.0,
+          ),],
         borderRadius: BorderRadius.circular(10.0),
-        color: kSecondaryColor,
+        color: kPrimaryColor,
       ),
-      margin: EdgeInsets.fromLTRB(15, 15, 0, 0),
-      padding: EdgeInsets.only(left: 10,right: 15,top: 3),
+      margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
+      padding: EdgeInsets.only(left: 10, right: 15, top: 3),
       width: 330,
       height: 120,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Icon(
-                Icons.account_balance_wallet,
-                size: 50,
-                color: Colors.black38,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.account_balance_wallet,
+                    size: 50,
+                    color: Colors.white30,
+                  ),
+                ],
               ),
-            ],
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                'Account Balance',
-                style: TextStyle(fontSize: 16),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    'Current Balance',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    '\$3000.00',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontFamily: 'Alata'
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                '\$3000.00',
-                style: TextStyle(fontSize: 20,color: Colors.green),
-              ),
-
             ],
           ),
         ],
       ),
-      ],
-    ),
     );
   }
 }
+
+

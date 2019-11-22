@@ -1,13 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'dart:async';
 
-class MyMap extends StatefulWidget {
+class MyMapScreen extends StatefulWidget {
   @override
-  _MyMapState createState() => _MyMapState();
+  State<MyMapScreen> createState() => MyMapScreenState();
 }
 
-class _MyMapState extends State<MyMap> {
+class MyMapScreenState extends State<MyMapScreen> {
+  Completer<GoogleMapController> _controller = Completer();
+
+  static final CameraPosition _home = CameraPosition(
+    target: LatLng(10.551020, 7.417470),
+    zoom: 17.4746,
+  );
+
+  static final CameraPosition _mech = CameraPosition(
+      bearing: 192.8334901395799,
+      target: LatLng(10.527680, 7.438570),
+      tilt: 20.440717697143555,
+      zoom: 30.151926040649414);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return new Scaffold(
+      body: SafeArea(
+        child: Stack(
+          children: <Widget>[
+            GoogleMap(
+              mapType: MapType.normal,
+              initialCameraPosition: _home,
+              onMapCreated: (GoogleMapController controller) {
+                _controller.complete(controller);
+              },
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: _goToTheLake,
+        label: Text('Mechanic'),
+        icon: Icon(FontAwesomeIcons.wrench),
+      ),
+    );
+  }
+
+  Future<void> _goToTheLake() async {
+    final GoogleMapController controller = await _controller.future;
+    controller.animateCamera(CameraUpdate.newCameraPosition(_mech));
   }
 }

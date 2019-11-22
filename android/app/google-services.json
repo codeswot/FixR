@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "579156989106",
+    "firebase_url": "https://gyara01.firebaseio.com",
+    "project_id": "gyara01",
+    "storage_bucket": "gyara01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579156989106:android:a10770e49108e51fea65ab",
+        "android_client_info": {
+          "package_name": "com.geeksaxis.gyara_01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579156989106-omkbt07i283ni3qn4fprennlj3la9o63.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geeksaxis.gyara_01",
+            "certificate_hash": "bf997b989f6e42675318fa742ee7c0d64e29f99f"
+          }
+        },
+        {
+          "client_id": "579156989106-547k09hdl3nhdb1uu0c61hojfhiauvcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1aIhUZrThwMgahEyIjnf8n9uHDvCMa2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579156989106-547k09hdl3nhdb1uu0c61hojfhiauvcn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

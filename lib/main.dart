@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gyara',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.grey[100],
         primaryColor: kPrimaryColor,
         cursorColor: kPrimaryColor,
         primarySwatch: Colors.blue,
