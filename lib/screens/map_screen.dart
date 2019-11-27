@@ -13,14 +13,14 @@ class MyMapScreenState extends State<MyMapScreen> {
 
   static final CameraPosition _home = CameraPosition(
     target: LatLng(10.551020, 7.417470),
-    zoom: 17.4746,
+    zoom: 16,
   );
 
   static final CameraPosition _mech = CameraPosition(
       bearing: 192.8334901395799,
       target: LatLng(10.527680, 7.438570),
-      tilt: 20.440717697143555,
-      zoom: 30.151926040649414);
+      tilt: 30,
+      zoom: 17);
 
   @override
   Widget build(BuildContext context) {

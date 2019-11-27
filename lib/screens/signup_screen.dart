@@ -68,10 +68,10 @@ class _SignUpState extends State<SignUp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
-                    height: 3,
+                    height: 10,
                   ),
                   SizedBox(
-                    height: 200.0,
+                    height: 80.0,
                     child: Image.asset(
                       'images/bg2.png',
                       fit: BoxFit.contain,

@@ -16,7 +16,9 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       Duration(seconds: 5),
       () => Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (BuildContext context) => LogIn()),
+        MaterialPageRoute(
+          builder: (BuildContext context) => LogIn(),
+        ),
       ),
     );
   }
@@ -26,13 +28,29 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Center(
-            child: Image.asset('images/bg2.png'),
+          SizedBox(
+            height: 130,
+          ),
+          SizedBox(
+            width: 300,
+            child: Container(
+              margin: EdgeInsets.only(
+                left: 50,
+              ),
+              child: Image.asset(
+                'images/bg2.png',
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 150,
           ),
           Container(
-            margin: EdgeInsets.only(top: 90),
+            margin: EdgeInsets.only(
+              left: 50,
+            ),
             child: Text(
               'GeeksAxis',
               style: TextStyle(

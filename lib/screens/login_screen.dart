@@ -72,7 +72,7 @@ class _LogInState extends State<LogIn> {
                     height: 80,
                   ),
                   SizedBox(
-                    height: 200.0,
+                    height: 90.0,
                     child: Image.asset(
                       'images/bg2.png',
                       fit: BoxFit.contain,

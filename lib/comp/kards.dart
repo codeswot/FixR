@@ -82,7 +82,7 @@ class _CashKardState extends State<CashKard> {
         borderRadius: BorderRadius.circular(10.0),
         color: kPrimaryColor,
       ),
-      margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
+      margin: EdgeInsets.fromLTRB(0, 5, 0, 10),
       padding: EdgeInsets.only(left: 10, right: 15, top: 3),
       width: 330,
       height: 120,
