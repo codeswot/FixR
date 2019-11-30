@@ -19,18 +19,18 @@ class _TechScreenState extends State<TechScreen> {
             context: context,
             tiles: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  SizedBox(width: 10),
                   Container(
                     child: Icon(Icons.arrow_back),
                   ),
-                  Container(
+SizedBox(),            Container(
                     margin: EdgeInsets.only(top: 20, bottom: 20),
                     child: Text(
-                      'Nearest Technicians',
+                      'Mechanics',
                       style: TextStyle(
                           color: kPrimaryColor,
-                          fontSize: 30,
+                          fontSize: 25,
                           fontFamily: 'Alata'),
                     ),
                   ),
