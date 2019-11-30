@@ -1,10 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gyara_01/globals/const.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    Key key,
-  }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +60,7 @@ class Header extends StatelessWidget {
                                 ),
                               ),
                               Icon(
-                                Icons.location_on,
+                                CupertinoIcons.location_solid,
                                 size: 13,
                                 color: Colors.black26,
                               ),
