@@ -6,6 +6,7 @@ import 'package:gyara_01/comp/header_profile.dart';
 import 'package:gyara_01/comp/kards.dart';
 import 'package:gyara_01/globals/const.dart';
 import 'package:gyara_01/screens/technician_screen.dart';
+import 'package:gyara_01/screens/test_screen.dart';
 import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,15 +17,30 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final List<TitledNavigationBarItem> items = [
     TitledNavigationBarItem(
-        iconActive: Icons.settings, iconInActive: Icons.settings),
+//      onPressed: () {
+//        setState(() {
+//          Navigator.push(
+//              context, MaterialPageRoute(builder: (context) => Test()));
+//        });
+//      },
+      iconActive: Icons.settings,
+      iconInActive: Icons.settings,
+    ),
     TitledNavigationBarItem(
-        iconActive: Icons.call_split, iconInActive: Icons.call_split),
-    TitledNavigationBarItem(iconActive: Icons.home, iconInActive: Icons.home),
+      iconActive: Icons.call_split,
+      iconInActive: Icons.call_split,
+    ),
+    TitledNavigationBarItem(
+      iconActive: Icons.home,
+      iconInActive: Icons.home,
+    ),
     TitledNavigationBarItem(
         iconActive: Icons.account_balance_wallet,
         iconInActive: Icons.account_balance_wallet),
     TitledNavigationBarItem(
-        iconActive: Icons.person_outline, iconInActive: Icons.person_outline),
+      iconActive: Icons.person_outline,
+      iconInActive: Icons.person_outline,
+    ),
   ];
 
   bool navBarMode = true;
@@ -50,25 +66,49 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: <Widget>[
                         Kard(
                           onpush: () {
-                            setState(() {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => TechScreen(),
-                                ),
-                              );
-                            });
+                            setState(
+                              () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => TechScreen(),
+                                  ),
+                                );
+                              },
+                            );
                           },
                           iconz: FontAwesomeIcons.wrench,
                           labelz: "Find Mechanic",
                         ),
                         Kard(
-                          onpush: () {},
+                          onpush: () {
+                            setState(
+                              () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Test(),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                           iconz: FontAwesomeIcons.storeAlt,
                           labelz: "Gyara Store",
                         ),
                         Kard(
-                          onpush: () {},
+                          onpush: () {
+                            setState(
+                              () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Test(),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                           iconz: FontAwesomeIcons.truck,
                           labelz: "Tow Truck",
                         ),
@@ -77,18 +117,51 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: <Widget>[
                         Kard(
-                          onpush: () {},
-                          iconz: FontAwesomeIcons.compress,
+                          onpush: () {
+                            setState(
+                              () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Test(),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                          iconz: Icons.trip_origin,
                           labelz: "Tire Fixer",
                         ),
                         Kard(
-                          onpush: () {},
-                          iconz: FontAwesomeIcons.lightbulb,
+                          onpush: () {
+                            setState(
+                              () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Test(),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                          iconz: Icons.lightbulb_outline,
                           labelz: "Today\'s Tip",
                         ),
                         Kard(
-                          onpush: () {},
-                          iconz: FontAwesomeIcons.cookie,
+                          onpush: () {
+                            setState(
+                              () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Test(),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                          iconz: Icons.local_car_wash,
                           labelz: "Car Wash",
                         ),
                       ],
@@ -112,8 +185,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     text1: 'Get Your ',
                     text2: 'Car Wash',
                     text3: 'New Discount get car wash',
-                    text4: 'on repairs above \$200',
+                    text4: 'on repairs above N1000',
                     background: AssetImage('images/ad2.jpg'),
+                  ),
+                  AddsCard(
+                    text1: 'Free ',
+                    text2: 'Tire Fix',
+                    text3: 'Free tire fix evry saturday ',
+                    text4: 'on repairs above N200',
+                    background: AssetImage('images/ad3.jpg'),
                   ),
                 ],
               ),
@@ -121,14 +201,19 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-
+//TODO: Find a good way to do this
       bottomNavigationBar: TitledBottomNavigationBar(
-        onTap: (index) => print("Selected Index: $index"),
+        onTap: (index) => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Test(),
+          ),
+        ),
         reverse: navBarMode,
         curve: Curves.easeInBack,
         items: items,
         activeColor: kPrimaryColor,
-        inactiveColor: Colors.black38,
+        inactiveColor: kPrimaryColor2,
       ),
     );
   }

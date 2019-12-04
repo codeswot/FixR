@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:gyara_01/globals/const.dart';
 
 class Header extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -40,7 +38,7 @@ class Header extends StatelessWidget {
                           child: Text(
                             'Musa Omar',
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.black54,
                               fontSize: 25,
                               fontFamily: 'Alata',
                               fontWeight: FontWeight.bold,
@@ -54,7 +52,7 @@ class Header extends StatelessWidget {
                               Text(
                                 'Kaduna, Nigeria',
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black54,
                                   fontSize: 15,
                                   fontFamily: 'Alata',
                                 ),
@@ -89,7 +87,6 @@ class Header extends StatelessWidget {
               )
             ],
           ),
-        ]
-    );
+        ]);
   }
 }

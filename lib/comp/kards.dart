@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gyara_01/globals/const.dart';
+import 'package:gyara_01/screens/wallet.dart';
 
 //my cards as buttons = kards
 
@@ -18,11 +19,13 @@ class Kard extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
 //              border: Border.all(color: kPrimaryColor),
-              boxShadow: [BoxShadow(
-                color: Colors.grey,
-                blurRadius: 2,
+              boxShadow: [
+                BoxShadow(
+                  color: kSecondaryShadowColor,
+                  blurRadius: 2,
                   spreadRadius: 0.1,
-              ),],
+                ),
+              ],
               borderRadius: BorderRadius.circular(10.0),
               color: kSecondaryColor,
             ),
@@ -35,7 +38,7 @@ class Kard extends StatelessWidget {
               children: <Widget>[
                 Icon(
                   iconz,
-                  color: kBlueTextColor,
+                  color: kPrimaryColor,
                   size: 40,
                   semanticLabel: semanticText,
                 ),
@@ -46,7 +49,7 @@ class Kard extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14,
-                      color: kBlueTextColor,
+                      color: kPrimaryColor,
                       fontFamily: 'Alata',
                     ),
                   ),
@@ -75,10 +78,12 @@ class _CashKardState extends State<CashKard> {
       decoration: BoxDecoration(
 //        border: Border.all(color: Colors.green),
 
-          boxShadow: [BoxShadow(
-            color: Colors.grey,
+        boxShadow: [
+          BoxShadow(
+            color: kSecondaryShadowColor,
             blurRadius: 5.0,
-          ),],
+          ),
+        ],
         borderRadius: BorderRadius.circular(10.0),
         color: kPrimaryColor,
       ),
@@ -95,10 +100,24 @@ class _CashKardState extends State<CashKard> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Icon(
-                    Icons.account_balance_wallet,
-                    size: 50,
-                    color: Colors.white30,
+                  InkWell(
+                    onTap: () {
+                      setState(
+                        () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyWallet(),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: Icon(
+                      Icons.account_balance_wallet,
+                      size: 50,
+                      color: kSecondaryColor3,
+                    ),
                   ),
                 ],
               ),
@@ -109,18 +128,22 @@ class _CashKardState extends State<CashKard> {
                   Text(
                     'Current Balance',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Alata',
+                      color: kPrimaryColor2,
+                      fontSize: 17,
                     ),
                   ),
                   SizedBox(
                     height: 5,
                   ),
                   Text(
-                    '\$3000.00',
+                    'N3000.00',
                     style: TextStyle(
                       fontSize: 20,
-                      color: Colors.white,
-                      fontFamily: 'Alata'
+                      color: kSecondaryColor,
+                      fontFamily: 'Alata',
                     ),
                   ),
                 ],
@@ -132,5 +155,3 @@ class _CashKardState extends State<CashKard> {
     );
   }
 }
-
-

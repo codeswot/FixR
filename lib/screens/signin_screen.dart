@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gyara_01/comp/input_fields.dart';
 import 'package:gyara_01/comp/buttons.dart';
+import 'package:gyara_01/comp/input_fields.dart';
 import 'package:gyara_01/globals/const.dart';
 import 'package:gyara_01/screens/home_screen.dart';
 import 'package:gyara_01/screens/signup_screen.dart';
@@ -22,7 +22,7 @@ class _LogInState extends State<LogIn> {
       style: TextStyle(
         fontFamily: 'Alata',
         fontSize: kScreenTitle,
-        color: kBlueTextColor,
+        color: kPrimaryColor,
       ),
     );
 
@@ -46,13 +46,17 @@ class _LogInState extends State<LogIn> {
           );
         });
       },
-      textOnButton: 'Log in',
+      textOnButton: 'Sign in',
     );
     final signUpButton = SecondaryButton(
       onPush: () {
         setState(() {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => SignUp()));
+            context,
+            MaterialPageRoute(
+              builder: (context) => SignUp(),
+            ),
+          );
         });
       },
       textOnButton: 'Sign up',
@@ -61,7 +65,7 @@ class _LogInState extends State<LogIn> {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            color: kWhiteTextColor,
+            color: kSecondaryColor,
             child: Padding(
               padding: const EdgeInsets.all(36.0),
               child: Column(
@@ -69,38 +73,38 @@ class _LogInState extends State<LogIn> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
-                    height: 80,
+                    height: 70,
                   ),
                   SizedBox(
-                    height: 90.0,
+                    height: 100.0,
                     child: Image.asset(
                       'images/bg2.png',
+//                      scale: 20,
                       fit: BoxFit.contain,
                     ),
                   ),
-                  SizedBox(height: 0.0),
                   onScreen,
-                  SizedBox(height: 20.0),
+                  SizedBox(height: 25.0),
                   emailField,
                   SizedBox(height: 25.0),
                   passwordField,
                   SizedBox(
-                    height: 35.0,
+                    height: 30.0,
                   ),
                   loginButon,
                   SizedBox(
-                    height: 15.0,
+                    height: 20.0,
                   ),
                   signUpButton,
                   SizedBox(
-                    height: 20,
+                    height: 20.0,
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: () {},
                     child: Text(
                       'Forgot Password ?',
                       style: TextStyle(
-                        color: Colors.red[300],
+                        color: kSecondaryColor2,
                         fontFamily: 'Lato',
                         fontWeight: FontWeight.bold,
                       ),

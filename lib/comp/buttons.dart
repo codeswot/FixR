@@ -4,8 +4,8 @@ import 'package:gyara_01/globals/const.dart';
 //Outline Secondary Button
 
 class SecondaryButton extends StatelessWidget {
-  SecondaryButton({@required this.onPush,this.textOnButton});
-final Function onPush;
+  SecondaryButton({@required this.onPush, this.textOnButton});
+  final Function onPush;
   final String textOnButton;
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,11 @@ final Function onPush;
         borderRadius: new BorderRadius.circular(30.0),
       ),
       borderSide: BorderSide(
-        color: Color(0xff01A0C7),
+        color: kPrimaryColor,
         style: BorderStyle.solid,
         width: 1,
       ),
-    highlightColor: Colors.blue[200],
+      highlightColor: Colors.blue[200],
       padding: kButtonPadding,
       onPressed: onPush,
       child: Text(
@@ -32,7 +32,7 @@ final Function onPush;
 
 //full Primary button
 class PrimaryButton extends StatelessWidget {
-  PrimaryButton({this.textOnButton,@required this.onPush});
+  PrimaryButton({this.textOnButton, @required this.onPush});
   final Function onPush;
   final String textOnButton;
   @override
@@ -48,10 +48,10 @@ class PrimaryButton extends StatelessWidget {
       minWidth: MediaQuery.of(context).size.width,
       padding: kButtonPadding,
       onPressed: onPush,
-      child: Text( textOnButton,
-          style: kTextStylePrimary,
-          textAlign: TextAlign.center,
-
+      child: Text(
+        textOnButton,
+        style: kTextStylePrimary,
+        textAlign: TextAlign.center,
       ),
     );
   }

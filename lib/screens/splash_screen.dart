@@ -1,8 +1,9 @@
 import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gyara_01/globals/const.dart';
-import 'package:gyara_01/screens/login_screen.dart';
+import 'package:gyara_01/screens/signin_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -27,40 +28,34 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
+      body: Stack(
         children: <Widget>[
-          SizedBox(
-            height: 130,
+          Center(
+            child: Image.asset(
+              'images/bg2.png',
+              scale: 2.6,
+            ),
           ),
-          SizedBox(
-            width: 300,
+          Positioned(
+            bottom: 25,
+//            left: 125,
             child: Container(
-              margin: EdgeInsets.only(
-                left: 50,
-              ),
-              child: Image.asset(
-                'images/bg2.png',
-                fit: BoxFit.contain,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 150,
-          ),
-          Container(
-            margin: EdgeInsets.only(
-              left: 50,
-            ),
-            child: Text(
-              'GeeksAxis',
-              style: TextStyle(
-                color: kBlueTextColor,
-                fontFamily: 'Lato',
-                fontWeight: FontWeight.bold,
-                fontSize: kButtonFontSize,
+              padding: EdgeInsets.all(5),
+              margin: EdgeInsets.only(left: 125, right: 125),
+              child: Text(
+                //TODO:Make it a bit faded
+                'Gyara',
+                style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontFamily: 'Alata',
+                  color: kPrimaryColor,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
-          ),
+          )
         ],
       ),
     );

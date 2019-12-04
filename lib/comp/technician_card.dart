@@ -4,6 +4,7 @@ import 'package:gyara_01/globals/const.dart';
 
 class TechCard extends StatelessWidget {
   TechCard({
+    this.isavailable,
     this.requestTech,
     this.profilPic,
     this.technicianName,
@@ -15,6 +16,7 @@ class TechCard extends StatelessWidget {
     this.rating5,
     this.distance,
   });
+  final Text isavailable;
   final Function requestTech;
   final ImageProvider profilPic;
   final String technicianName;
@@ -29,7 +31,7 @@ class TechCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: requestTech,
       child: Container(
         margin: EdgeInsets.only(
           top: 5,
@@ -37,14 +39,16 @@ class TechCard extends StatelessWidget {
         ),
         child: ListTile(
           leading: Container(
-            width: 100.0,
-            height: 150.0,
+            width: 75.0,
+            height: 75.0,
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: profilPic,
               ),
-              borderRadius: BorderRadius.all(Radius.circular(8.0)),
+              borderRadius: BorderRadius.all(
+                Radius.circular(3.0),
+              ),
             ),
           ),
           title: Container(
@@ -78,23 +82,23 @@ class TechCard extends StatelessWidget {
               children: <Widget>[
                 Icon(
                   rating1,
-                  color: Colors.orange,
+                  color: kRatingColor,
                 ),
                 Icon(
                   rating2,
-                  color: Colors.orange,
+                  color: kRatingColor,
                 ),
                 Icon(
                   rating3,
-                  color: Colors.orange,
+                  color: kRatingColor,
                 ),
                 Icon(
                   rating4,
-                  color: Colors.orange,
+                  color: kRatingColor,
                 ),
                 Icon(
                   rating5,
-                  color: Colors.orange,
+                  color: kRatingColor,
                 ),
               ],
             ),
@@ -102,15 +106,9 @@ class TechCard extends StatelessWidget {
           trailing: Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
-                GestureDetector(
-                  onTap: requestTech,
-                  child: Icon(
-                    Icons.phone,
-                    size: 33,
-                    color: kPrimaryColor,
-                  ),
-                ),
+                isavailable,
                 Text(
                   distance,
                   style: TextStyle(

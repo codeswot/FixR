@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gyara_01/globals/const.dart';
-import 'package:gyara_01/comp/input_fields.dart';
 import 'package:gyara_01/comp/buttons.dart';
+import 'package:gyara_01/comp/input_fields.dart';
+import 'package:gyara_01/globals/const.dart';
 
 class SignUp extends StatefulWidget {
   SignUp({Key key, this.title}) : super(key: key);
@@ -13,16 +13,12 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-
   @override
   Widget build(BuildContext context) {
     final onScreen = Text(
       "Sign Up",
       style: TextStyle(
-        fontSize: kScreenTitle,
-        color: kBlueTextColor,
-        fontFamily: 'Alata'
-      ),
+          fontSize: kScreenTitle, color: kPrimaryColor, fontFamily: 'Alata'),
     );
 
     final nameField = InputField(
@@ -45,14 +41,14 @@ class _SignUpState extends State<SignUp> {
     );
 
     final signUpButton = PrimaryButton(
-      onPush: (){},
+      onPush: () {},
       textOnButton: 'Sign up',
     );
     final loginButton = SecondaryButton(
-      onPush: (){
-      setState(() {
-        Navigator.pop(context);
-      });
+      onPush: () {
+        setState(() {
+          Navigator.pop(context);
+        });
       },
       textOnButton: 'Sign in',
     );
@@ -68,30 +64,27 @@ class _SignUpState extends State<SignUp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    height: 80.0,
+                    height: 100.0,
                     child: Image.asset(
                       'images/bg2.png',
                       fit: BoxFit.contain,
                     ),
                   ),
                   onScreen,
-                  SizedBox(height: 15.0),
+                  SizedBox(height: 25.0),
                   nameField,
-                  SizedBox(height: 20.0),
+                  SizedBox(height: 25.0),
                   emailField,
-                  SizedBox(height: 20.0),
+                  SizedBox(height: 25.0),
                   passwordField,
-                  SizedBox(height: 20.0),
+                  SizedBox(height: 25.0),
                   confirmPasswordField,
                   SizedBox(
-                    height: 30.0,
+                    height: 25.0,
                   ),
                   signUpButton,
                   SizedBox(
-                    height: 15.0,
+                    height: 20.0,
                   ),
                   loginButton,
                 ],
