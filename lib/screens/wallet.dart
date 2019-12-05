@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gyara_01/globals/const.dart';
 
@@ -126,8 +127,15 @@ class _MyWalletState extends State<MyWallet> {
               ],
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text('Transaction History'),
+                Text(
+                  'Transaction History',
+                  style: TextStyle(
+                    color: kPrimaryColor,
+                    fontSize: 15,
+                  ),
+                ),
               ],
             ),
           ],
