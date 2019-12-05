@@ -29,7 +29,10 @@ class _TechScreenState extends State<TechScreen> {
                 isavailable: Text(
                   'Available',
                   style: TextStyle(
-                      color: kPrimaryColor, fontFamily: 'Alata', fontSize: 12),
+                    color: kPrimaryColor,
+                    fontFamily: 'Alata',
+                    fontSize: 12,
+                  ),
                 ),
                 profilPic: AssetImage('images/mech5.jpg'),
                 technicianName: 'Musa Z. Usman',

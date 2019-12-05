@@ -13,8 +13,11 @@ class _ArrivalState extends State<Arrival> {
       body: Center(
           child: Text(
         'Mechanic has Arived!',
-        style:
-            TextStyle(color: kPrimaryColor, fontSize: 25, fontFamily: 'Alata'),
+        style: TextStyle(
+          color: kPrimaryColor,
+          fontSize: 25,
+          fontFamily: 'Alata',
+        ),
       )),
     );
   }

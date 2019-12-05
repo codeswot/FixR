@@ -76,7 +76,7 @@ class AddsCard extends StatelessWidget {
         image: DecorationImage(
           colorFilter: new ColorFilter.mode(
             Colors.black.withOpacity(0.6),
-            BlendMode.darken, //TODO:think of an awesome ovly
+            BlendMode.darken, //TODO:think of an awesome overly
           ),
           fit: BoxFit.cover,
           image: background,

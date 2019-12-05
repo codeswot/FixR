@@ -270,7 +270,7 @@ class _Requesting1State extends State<Requesting1> {
                                           BorderRadius.circular(15.0)),
                                   contentPadding: EdgeInsets.all(15),
                                   content: new Text(
-                                    "Are you sure you want to cancel ?",
+                                    'Are you sure you want to cancel ?',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: kPrimaryColor,
@@ -281,7 +281,7 @@ class _Requesting1State extends State<Requesting1> {
                                     // usually buttons at the bottom of the dialog
                                     new FlatButton(
                                       child: new Text(
-                                        "No",
+                                        'No',
                                         style: TextStyle(
                                           color: kPrimaryColor,
                                           fontFamily: 'Alata',
@@ -295,7 +295,7 @@ class _Requesting1State extends State<Requesting1> {
                                     ),
                                     new FlatButton(
                                       child: new Text(
-                                        "Yes",
+                                        'Yes',
                                         style: TextStyle(
                                           color: kSecondaryColor2,
                                           fontFamily: 'Alata',
@@ -365,7 +365,7 @@ class _Requesting1State extends State<Requesting1> {
     // Get the current time
     var now = DateTime.now();
     // Get a 1-minute interval
-    var twoHours = now.add(Duration(seconds: 60)).difference(now);
+    var twoHours = now.add(Duration(seconds: 10)).difference(now);
     // Get the total number of seconds, 1 minutes for 120 seconds
     seconds = twoHours.inSeconds;
   }
@@ -381,6 +381,7 @@ class _Requesting1State extends State<Requesting1> {
       });
       if (seconds == 0) {
         // Countdown seconds 0, cancel timer
+        //TODO: if timer = 0; rebuild timer as arrived!
         setState(() {
           Navigator.push(
             context,
